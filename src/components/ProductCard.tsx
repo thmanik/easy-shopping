@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-
+import { AiFillStar, AiOutlineStar} from "react-icons/ai";
+import { FaShoppingCart } from "react-icons/fa";
 interface propsType {
   img: string;
   title: string;
@@ -68,6 +68,7 @@ const ProductCard: React.FC<propsType> = ({
             <AiFillStar />
             <AiFillStar />
             <AiFillStar />
+            
           </div>
         );
 
@@ -95,9 +96,10 @@ const ProductCard: React.FC<propsType> = ({
 
         <div className="font-bold flex gap-4">
           ${price}
-          <del className="text-gray-500 font-normal">
-            ${parseInt(price) + 50}.00
-          </del>
+          <div className="text-gray-500 font-normal flex">
+           <span className="line-through"> ${parseInt(price) + 50}.00</span>
+           <button title="Add To Cart" className=" ms-8 header_top__icon_wrapper"><FaShoppingCart></FaShoppingCart></button>
+          </div>
         </div>
       </div>
     </div>

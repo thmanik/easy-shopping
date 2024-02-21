@@ -37,48 +37,14 @@ const productsData = [
     rating: 3,
     price: "58.00",
   },
-  {
-    img: "/watch-1.jpg",
-    title: "Watches",
-    desc: "Smart Watches Vital Plus",
-    rating: 4,
-    price: "100.00",
-  },
-  {
-    img: "/watch-2.jpg",
-    title: "Watches",
-    desc: "Pocket Watch Leather Pouch",
-    rating: 4,
-    price: "120.00",
-  },
-  {
-    img: "/sports-1.jpg",
-    title: "Sports",
-    desc: "Trekking & Running Shoes - Black",
-    rating: 3,
-    price: "58.00",
-  },
-  {
-    img: "/watch-1.jpg",
-    title: "Watches",
-    desc: "Smart Watches Vital Plus",
-    rating: 4,
-    price: "100.00",
-  },
-  {
-    img: "/watch-2.jpg",
-    title: "Watches",
-    desc: "Pocket Watch Leather Pouch",
-    rating: 4,
-    price: "120.00",
-  },
+ 
 ];
 
-const NewProducts = () => {
+const PopularProducts = () => {
   return (
     <div>
       <div className="container pt-16">
-        <h2 className="font-medium text-2xl pb-4">New Products<hr className="w-[200px]"/></h2>
+        <h2 className="font-medium text-2xl pb-4">Popular Products<hr className="w-[200px]" /></h2>
 
         <div className="grid grid-cols-1 place-items-center sm:place-items-start sm:grid-cols-2 lg:grid-col-3 xl:grid-cols-4 gap-4 xl:gap-x-8 xl:gap-y-8">
           {productsData.map((item, index) => (
@@ -97,4 +63,4 @@ const NewProducts = () => {
   );
 };
 
-export default NewProducts;
+export default PopularProducts;
